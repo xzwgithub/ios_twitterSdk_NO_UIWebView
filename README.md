@@ -6,12 +6,14 @@ The purpose is to solve the problem of  iOS12 system webview is shown after conf
 
 @property (nonatomic, assign) UIBackgroundTaskIdentifier taskIdentifier;
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+- (void)applicationWillResignActive:(UIApplication *)application
+{
     
-    if (self.taskIdentifier != UIBackgroundTaskInvalid) {
+    if (self.taskIdentifier != UIBackgroundTaskInvalid) 
+    {
         [application endBackgroundTask:self.taskIdentifier];
         self.taskIdentifier = UIBackgroundTaskInvalid;
-      }
+    }
     __weak typeof(self) weakSelf = self;
     self.taskIdentifier = [application beginBackgroundTaskWithName:nil expirationHandler:^{
         [application endBackgroundTask:weakSelf.taskIdentifier];
