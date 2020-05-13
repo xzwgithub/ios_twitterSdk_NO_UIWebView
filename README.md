@@ -1,6 +1,6 @@
 # ios_twitterSdk_NO_UIWebView
 
-To use the twitter SDK, you need to add these codes to the applicationwallresignactive method of AppDelegate.m
+To use the twitter SDK, you need to add these codes to the applicationWillResignActive method of AppDelegate.m
 
 The purpose is to solve the problem of  iOS12 system webview is shown after confirm from the twitter app.
 
